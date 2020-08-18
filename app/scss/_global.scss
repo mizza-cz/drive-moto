@@ -6,23 +6,30 @@ html{
 *::before{
    box-sizing: inherit;
 }
-body{
-   background-color: red;
-}
+
 a{
-   display: inline-block;
+   text-decoration: none;
+   color: inherit ;
 }
 ul,
 li{
    margin: 0;
-   margin: 0;
+   padding: 0;
    list-style: none;
+}
+h1, h2, h3, h4, h5, h6{
+   margin: 0;
 }
 
 body{
-
+   color: #2F3035;
+   line-height: 24px;
+   font-size: 20px;
+   @include sf-regular;
 }
 
 .container{
-   
+   max-width: 1200px;
+   padding: 0 15px;
+   margin: 0 auto;
 }

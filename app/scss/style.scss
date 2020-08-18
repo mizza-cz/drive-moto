@@ -1,5 +1,102 @@
 @import 'vars';
 @import 'global';
+@import 'fonts';
 
 
+// header top
+.header__top-inner{
+   @include sf-bold;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 122px;
+}
 
+.menu__item{
+   display: inline-block;
+   &+.menu__item{
+      margin-left: 50px;
+   }
+}
+.header__box{
+   display: flex;
+}
+.header__adress{
+   position: relative;
+   padding-left: 30px;
+   margin-right: 60px;
+   width: 265px;
+   &::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/icon/adress-icon.svg);
+      left: 0;
+      height: 30px;
+      width: 30px;
+   }
+}
+.user-list{
+   margin-right: 15px;
+   display: flex;
+   align-items: center;
+   &__item{
+      padding-right: 10px;
+   }
+}
+
+.cart{
+   position: relative;
+   &__num{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      @include sf-medium;
+      font-size: 10px;
+      line-height: 20px;
+      color: #fff;
+      background-color: $acent;
+      border-radius: 50%;
+      text-align: center;
+      bottom: -2px;
+      right: -14px;
+   }
+}
+
+/// header bottom
+.header__bottom{
+   margin-bottom: 78px;
+}
+.menu-categories{
+   background-color: $gray;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 53px;
+
+ 
+
+   &__link{
+      padding: 15px 0 14px;
+      transition: all .5s;
+      position: relative;
+      &:hover{
+         color: $acent;
+      }
+      &::before{
+         transition: all .5s;
+         content: '';
+         position: absolute;
+         width: 0;
+         left: auto;
+         right: 0;
+         background-color: $acent;
+         height: 3px;
+         bottom: -3px;
+      }
+      &:hover::before{
+         width: 100%;
+         right: auto;
+         left: 0;
+      }
+   }
+}
