@@ -18,3 +18,8 @@
 
 $acent: #1C62CD;
 $gray: #F0F0F4;
+
+@mixin border {
+   border-radius: 3px;
+   border: 1px solid #cdcdcd;
+}
