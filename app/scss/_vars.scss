@@ -23,3 +23,7 @@ $gray: #F0F0F4;
    border-radius: 3px;
    border: 1px solid #cdcdcd;
 }
+@mixin text {
+   font-size: 15px;
+   line-height: 18px;
+}

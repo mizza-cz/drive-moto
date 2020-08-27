@@ -435,8 +435,7 @@
 }
 .products-tab{
    padding-bottom: 10px;
-   font-size: 15px;
-   line-height: 18px;
+   @include text;
 }
 .products-tab.tab--active{
    font-weight: 600;
@@ -448,7 +447,7 @@
    padding: 52px 20px 31px;
    width: 100%;
    transition: all .3s;
-   min-height: 400px;
+   min-height: 408px;
    height: 100%;
 
    &__img{
@@ -610,10 +609,9 @@
 
    &-link{
       padding: 16px 43px;
-      font-size: 15px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      line-height: 18px;
+      @include text;
       background-color: $gray;
    }
 }
@@ -634,8 +632,7 @@
    &__list{
 
       &-item{
-         line-height: 18px;
-         font-size: 15px;
+         @include text;
          color: #c4c4c4;
          display: inline-block;
          padding-right: 16px;
@@ -1090,8 +1087,7 @@ button.catalog__filter-btnline{
       background: #f0f0f4;
       text-transform: uppercase;
       padding: 16px 85px;
-      font-size: 15px;
-      line-height: 18px;
+      @include text;
       letter-spacing: 0.12em;
       color: #BDBEC2;
       border: none;
@@ -1137,3 +1133,226 @@ button.catalog__filter-btnline{
       transform: rotate(180deg);
    }
 }
+
+
+////// product-page 
+
+// product-card
+.product-card{
+   margin-bottom: 80px;
+
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__img-box{
+      width: 500px;
+      padding-top: 64px;
+      text-align: center;
+      font-family: 'Barlow', sans-serif;
+      position: relative;
+      &::before{
+         @include text;
+         letter-spacing: 0.12em;
+         padding: 13px 25px;
+         border-radius: 3px;
+      }
+   }
+   &__content{
+      width: 570px;
+   }
+   &__price-old{
+      display: inline-block;
+      line-height: 44px;
+      font-size: 30px;
+      opacity: 0.6;
+      background-image: url('../images/icon/old-line.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   &__price-new{
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 17px;
+   }
+   &__link{
+      border-bottom: 1px solid $acent;
+      @include text;
+      color: $acent;
+   }
+   &__title{
+      @include sf-bold;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 10px;
+   }
+   &__code{
+      @include text;
+      opacity: 0.6;
+      margin-bottom: 22px;
+   }
+   &__buttons{
+      margin-bottom: 50px;
+      & a+a{
+         margin-left: 30px;
+      }
+   }
+   &__tab{
+      font-size: 20px;
+      line-height: 24px;
+      opacity: 0.6;
+      color: #2F3035;
+      padding-bottom: 5px;
+      padding-right: 17px;
+      margin-bottom: 5px;
+      & + .product-card__tab{
+         margin-left: 17px;
+      }
+      &.tab--active{
+         opacity: 1;
+         border-bottom: 2px solid $acent;
+         @include sf-bold;
+      }
+   }
+   &__item{
+      border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+      padding: 15px 0 6px;
+      display: flex;
+      justify-content: space-between;
+      &-left{
+         padding-right: 15px;
+      }
+      &-right{
+         width: 125px;
+      }
+   }
+   &__more{
+      font-size: 14px;
+      line-height: 17px;
+      color: $acent;
+      border-bottom: 1px solid $acent;
+      margin-bottom: 40px;
+   }
+   &__btn{
+      
+      button{
+         text-transform: uppercase;
+         font-size: 14px;
+         line-height: 17px;
+         color: #fff;
+         border: none;
+         letter-spacing: 0.12em;
+         padding: 16px 56px;
+         background: $acent;
+         border-radius: 3px;
+         cursor: pointer;
+      }
+   }
+   &__list{
+      margin-bottom: 20px;
+   }
+}
+
+
+/// card__tab
+.card__tabs{
+   margin-bottom: 100px;
+}
+.card__tab{
+   font-size: 20px;
+   line-height: 24px;
+   color: #2F3035;
+   opacity: 0.6;
+   border-bottom: 2px solid transparent;
+   padding-bottom: 3px;
+   &.tab--active{
+      opacity: 1;
+      border-bottom: 2px solid $acent;
+   }
+   &-box{
+      background: #f0f0f4;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 22px 0 20px;
+      margin-bottom: 50px;
+   }
+}
+.card__top-line{
+   margin-bottom: 10px;
+}
+.card__label{
+   &-search{
+      line-height: 20px;
+      color: rgba(47, 48, 53, 0.7);
+      font-size: 17px;
+   }
+   &-pickup{
+      margin-right: 54px;
+      font-size: 17px;
+      line-height: 20px;
+      color: rgba(47, 48, 53, 0.7);
+   }
+}
+.card__input-search{
+   background: #f0f0f4;
+   border-radius: 3px;
+   margin-left: 17px;
+   padding: 9px 37px 9px 17px;
+   border: none;
+   margin-right: 100px;
+}
+.card__list{
+   
+   &-item{
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(47, 48, 53, 0.1);
+      display: flex;
+      font-size: 16px;
+      color: rgba(47, 48, 53, 0.7);
+      line-height: 22px;
+   }
+   &-itemtitle{
+      color: rgb(47, 48, 53);
+      font-size: 20px;
+      line-height: 24px;
+   }
+   &-address{
+      width: 220px;
+      margin-right: 80px;
+   }
+   &-worktime{
+      width: 157px;
+      margin-right: 96px;
+     
+   }
+   &-avialable{
+      width: 140px;
+      margin-right: 60px;
+   }
+   &-num{
+      width: 104px;
+   }
+   &-btn{
+      margin-left: auto;
+   }
+   &-btn button{
+      background: $acent;
+      color: #fff;
+      font-size: 13px;
+      line-height: 16px;
+      letter-spacing: 0.12em;
+      padding: 10px 40px;
+      border: none;
+      text-transform: uppercase;
+      border-radius: 3px;
+   }
+}
+.worktime{
+   display: flex;
+   justify-content: space-between;
+}
+
+/// 
+@import 'media';
