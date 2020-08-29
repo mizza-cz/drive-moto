@@ -1,5 +1,320 @@
 
 
+// @media(max-width: 1200px){
+  
+// }
+// 1300
+@media(max-width: 1300px){
+   .product__more{
+      margin-top: 60px;
+   }
+}
+
+// 1200
 @media(max-width: 1200px){
-   
+   .catalog__inner-list{
+      justify-content: space-around;
+   }
+   .banner-link img{
+      width: 100%;
+   }
+   .categories__inner{
+      justify-content: space-around;
+   }
+   .banner-section{
+      &__slider-img{
+         height: 380px;
+         max-width: 600px;
+   }
+      &__inner{
+         justify-content: space-around;
+      }
+      &__slider{
+         max-width: 600px;
+      }
+   }
+}
+// 1100px
+@media(max-width: 1100px){
+   .card__input-search{
+      margin-right: 0;
+   }
+   .menu__item+.menu__item{
+      margin-left: 20px;
+   }
+   .header__adress{
+      margin-right: 20px;
+   }
+}
+
+
+// 968
+@media(max-width: 968px){
+   .product-card__img-box{
+      width: 100%;
+   }
+   .product-card__btn-mobile{
+      display: block;
+      margin-top: 40px;
+   }
+   .product-card__content{
+      order: -1;
+   }
+   .product-card__tabs{
+      display: none;
+   }
+   .product-card__inner{
+      flex-wrap: wrap;
+   }
+   .page-section{
+      margin-bottom: 50px;
+   }
+   .mobile-overflow{
+      width: 1000px;
+   }
+   .tabs-wrapper,
+   .catalog__filter-itemsinner,
+   .breadcrumbs__inner{
+      overflow-x: scroll;
+   }
+   .tabs-wrapper.tabs-wrapper--no-scroll{
+      overflow: hidden;
+   }
+  
+   .banner-section__slider{
+      
+      max-width: 100%;
+      &-img{
+         max-width: 100%;
+         margin-bottom: 25px;
+      }
+      &-item{
+         text-align: center;
+      }
+   }
+   .banner-section__inner{
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   .header{
+      margin-bottom: 25px;
+   }
+   .header__bottom,
+   .menu__list{
+      display: none;
+   }
+   .menu__mobile-linewrapper{
+      display: block;
+      font-size: 20px;
+      line-height: 24px;
+      @include sf-bold;
+      color: #2f3035;
+      background: #f0f0f4;
+      
+      overflow-x: scroll;
+   }
+   .menu__mobile-line{
+      padding: 14px 0 14px 15px;
+      width: 450px;
+   }
+   .menu__btn{
+      display: block;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      &-line{
+         background: #2f3035;
+         border-radius: 3px;
+         height: 3px;
+         width: 34px;
+         margin: 8px 0;
+      }
+   }
+}
+// 940
+@media(max-width: 940px){
+   .card__list-item{
+      display: block;
+      & div{
+         margin-bottom: 15px;
+      }
+   }
+   .card__list-itemtitle{
+      display: none;
+   }
+   .card__top-line label{
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+      margin-left: 0;
+   }
+   .catalog__filter{
+      display: block;
+   }
+   .catalog__filter-btn button{
+      display: none;
+   }
+   .catalog__filter-btn{
+      margin-top: 30px;
+   }
+   .footer__top-inner{
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+   .footer__top-item{
+      margin-bottom: 25px;
+   }
+}
+
+
+/// 640
+@media(max-width: 640px){
+   .product-card__img{
+      width: 100%;
+   }
+   .product-card__buttons a+a{
+      margin-left: 10px;
+   }
+   .product-card__title{
+      line-height: 24px;
+      font-size: 20px;
+   }
+   .aside__btn{
+      display: block;
+      text-transform: uppercase;
+      padding: 15px 0;
+      margin-bottom: 30px;
+      color: white;
+      background-color: $acent;
+      text-align: center;
+      @include sf-bold;
+      width: 100%;
+   }
+   .aside-filter{
+      display: none;
+   }
+   .catalog__inner{
+      flex-wrap: wrap;
+   }
+   .banner-link img{
+      min-height: 90px;
+      object-fit: cover;
+   }
+   .search__content{
+      &-form{
+         position: relative;
+      }
+      &-input{
+         height: 50px;
+         padding-right: 50px;
+      }
+      &-btn{
+         font-size: 0;
+         line-height: 0;
+         padding: 17px;
+         background-image: url('../images/icon/search.svg');
+         width: 24px;
+         height: 24px;
+         background-color: transparent;
+         background-repeat: no-repeat;
+         position: absolute;
+         right: 5px;
+         top: 14px;
+      }
+   }
+ 
+   .banner-section .container{
+      padding: 0;
+   }
+   .banner-section__slider-img{
+      height: 200px;
+   }
+   .header__adress{
+      display: none;
+   }
+}
+// 540
+
+@media(max-width: 540px){
+   .footer__topdrop{
+      pointer-events: auto;
+      position: relative;
+      &--active::after{
+         transform: rotate(180deg);
+      }
+      &::after{
+         position: absolute;
+         content: '';
+         background-image: url('../images/icon/drop-down.svg');
+         right: 0;
+         width: 12px;
+         height: 8px;
+         top: 21px;
+      }
+   }
+   .footer__top-itemdrop{
+      margin-bottom: 0;
+      border-top: 2px solid #f9f9fc;
+   }
+   .footer__top-title.footer__topdrop{
+      font-size: 14px;
+      line-height: 18px;
+      color: #7f7f7f;
+      font-weight: 500;
+      padding: 15px 0;
+      
+   }
+   .footer-list{
+      display: none;
+   }
+   .social-list{
+      justify-content: center;
+   }
+   .footer__top-social.footer__top-item{
+      width: 100%;
+      border-bottom: none;
+   }
+   .footer__top-newslatter.footer__top-item{
+      margin-right: auto;
+      margin-left: auto;
+      width: 290px;
+      text-align: center;
+   }
+   .footer__top-inner{
+      justify-content: start;
+   }
+   .footer__top-item{
+      width: 100%;
+      border-bottom: 2px solid #f9f9fc;
+   }
+   .footer__bottom{
+      flex-direction: column;
+      align-items: start;
+      &-link{
+         margin: 12px 0;
+      }
+   }
+}
+
+// 440
+@media(max-width: 440px){
+   .card__input-search{
+      display: block;
+      margin-top: 15px;
+      margin-left: 0;
+   }
+   .pagination-list__item {
+      margin: 0;  
+   }
+   .categories__item{
+      padding: 20px 10px 16px;
+   }
+   .banner-section__slider-img{
+      height: 164px;
+   }
+   .product-item__wrapper{
+      width: 100%;
+   }
+  
 }

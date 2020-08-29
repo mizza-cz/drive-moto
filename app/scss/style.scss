@@ -4,6 +4,9 @@
 
 
 // header top
+.header{
+   margin-bottom: 80px;
+}
 .header__top-inner{
    @include sf-bold;
    display: flex;
@@ -20,6 +23,12 @@
 }
 .header__box{
    display: flex;
+}
+.menu__btn{
+   display: none;
+}
+.menu__mobile-linewrapper{
+   display: none;
 }
 .header__adress{
    position: relative;
@@ -59,6 +68,35 @@
       text-align: center;
       bottom: -2px;
       right: -14px;
+   }
+}
+///// menu mobile
+.menu-mobile{
+   &__list{
+      width: 243px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+      transform: translateX(-100%);
+      transition: all .3s;
+      position: absolute;
+      z-index: 10;
+      background-color: #fff;
+   }
+   &__list--active{
+      transform: translateX(0);
+   }
+   &__item{
+      position: relative;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+   }
+   &__link{
+      display: block;
+      padding-left: 53px;
+      padding-top: 36px;
+   }
+   &__img{
+      position: absolute;
+      left: 11px;
+      bottom: 0;
    }
 }
 
@@ -122,10 +160,10 @@
    &__slider{
       max-width: 870px;
       
-      &-item img{
+      &-img{
          height: 400px;
          width: 100%;
-         object-fit: cover;
+        
       }
       &-btnprev{
          right:20px;
@@ -135,33 +173,33 @@
       }
    }
  
-   .slick-dots{
-      position: absolute;
-      bottom: 40px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      & li{
-         display: inline-block;
-         padding: 0 5px;
-      }
-      & button{
-         background-color: transparent;
-         padding: 0;
-         margin: 0;
-         font-size: 0;
-         width: 11px;
-         height: 11px;
-         border: 1px solid #fff;
-         border-radius: 50%;
-      }
-      .slick-active button{
-         background-color: #fff;
-         outline: none;
-      }
-   }
 }
 
+.slick-dots{
+   position: absolute;
+   bottom: 40px;
+   left: 0;
+   right: 0;
+   text-align: center;
+   & li{
+      display: inline-block;
+      padding: 0 5px;
+   }
+   & button{
+      background-color: transparent;
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+      width: 11px;
+      height: 11px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+   }
+   & .slick-active button{
+      background-color: #fff;
+      outline: none;
+   }
+}
 .sale-item{
    max-width: 265px;
    width: 100%;
@@ -419,6 +457,15 @@
 }
 
 // products
+.product-slider .slick-dots{
+   bottom: -30px;
+   & button{
+      background-color: #c4c4c4;
+   }
+   & .slick-active button{
+      background-color: $acent;
+   }
+}
 
 .product__title{
    font-weight: 700;
@@ -770,6 +817,9 @@ button.catalog__filter-btnline{
 
 
 // aside
+.aside__btn{
+   display: none;
+}
 .aside-filter{
    &__item-btn{
       text-align: center;
@@ -1138,6 +1188,9 @@ button.catalog__filter-btnline{
 ////// product-page 
 
 // product-card
+.product-card__btn-mobile{
+   display: none;
+}
 .product-card{
    margin-bottom: 80px;
 
@@ -1352,6 +1405,9 @@ button.catalog__filter-btnline{
 .worktime{
    display: flex;
    justify-content: space-between;
+}
+.footer__topdrop{
+   pointer-events: none;
 }
 
 /// 
